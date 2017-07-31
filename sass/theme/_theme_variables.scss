@@ -7,3 +7,25 @@
 
 $font-family-sans-serif:Arial, sans-serif;
 $brand-primary:         #7852B2; //#ff6d5a
+$text-color-light:		#eee;
+$text-color-dark:		#333;
+
+
+
+/*********************************************
+MEDIA QUERY VARIABLES
+*********************************************/
+
+$break_sm: 'min-width: 576px';
+$break_md: 'min-width: 768px';
+$break_lg: 'min-width: 992px';
+$break_xl: 'min-width: 1200px';
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

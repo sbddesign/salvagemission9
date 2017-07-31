@@ -1,1 +1,296 @@
-// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+@mixin hidden {
+	position: absolute;
+	left:-999em;
+}
+
+
+
+
+img {
+	display: block;
+	margin:1rem 0;
+}
+
+.wrapper {
+	padding-top:58px;
+}
+
+.icon-list {
+	list-style-type: none;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		margin-right: 1rem;
+	}
+
+	.fa {
+		margin-right:1rem;
+	}
+}
+
+//Responsive Video Embeds
+.video-container {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	width:100%;
+	padding-bottom: 56.25%;  //Set back to 56.25% ************
+	
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%; //Set back to 100% ************
+		}
+}
+
+
+.navbar {
+	
+	position: fixed;
+	width:100%;
+	z-index: 999;
+
+	.container {
+		width:100%;
+	}
+}
+
+.navbar-brand {
+	margin-left: 1rem;
+}
+
+.home  {
+	background:#000;
+	color: $text-color-light;
+
+	a {
+		color: lighten($link-color, 25%);
+
+		&.btn {
+			color: $white;
+		}
+	}
+
+	p {
+		text-shadow: 1px 1px 5px rgbA(0,0,0,0.5);
+	}
+}
+
+.content-area {
+	width:100%;
+}
+
+.section {
+	width:100%;
+	min-height:100vh;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+
+    font-size:6vw;
+
+    padding-top: 58px;
+
+    &:after {
+		content: "";
+		
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url('../img/map-bg-1.jpg');
+
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;   
+	}
+    
+	&:nth-child(even) {
+		//background-color:rgba(0,0,0,0.25);
+		&:after {
+			opacity: 0.35;
+		}
+	}
+
+	@media(#{$break_md}) {
+		font-size: 4vw;
+		padding: 5vw;
+		//color:#f00;
+	}
+
+	@media(#{$break_lg}) {
+		font-size: 2.5vw;
+		padding: 10vw;
+		//color:#f00;
+	}
+}
+
+#blog {
+	display: block;
+	padding:0;
+
+	#blog-title {
+		padding: 4vw;
+	}
+
+	.row {
+		margin:2rem 0;
+	}
+
+	article {
+		padding: 2vw 4vw;
+		border-bottom: 1px solid rgba(200,200,200,0.25);
+		font-size: 1.25rem;
+
+		@media(#{$break_md}) {
+			&:nth-child(odd) {
+				//padding-left:0;
+				border-right: 1px solid rgba(200,200,200,0.25);
+			}
+
+			&:nth-child(even) {
+				//padding-right:0;
+			}
+		}
+
+		@media(#{$break_lg}) {
+			&:nth-child(odd), &:nth-child(even) {
+				//font-size: 1vw;
+				padding:0 4vw;
+				border-right: 1px solid rgba(200,200,200,0.25);
+				border-bottom:0;
+			}
+
+			&:first-child {
+				//padding-left:0;
+			}
+
+			&:nth-child(4) {
+				border:0;
+			}
+		}
+	}
+}
+
+.tags-links {
+	display: block;
+
+	.comma {
+		@include hidden;
+	}
+
+	a {
+		background: lighten($btn-primary-bg, 15%);
+		color: $white;
+		display: inline-block;
+		margin:0 0.5rem 0.5rem 0;
+		padding:0.25rem 0.5rem;
+		font-size: 0.75rem;
+	}
+}
+
+.tags-links-title {
+	position: absolute;
+	left: -999rem;
+}
+
+#hero {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('../img/map-bg-1.jpg');
+}
+
+.logo-container {
+	
+	width:100%;
+
+	@media(#{$break_xl}) {
+		width:40%;
+	}
+}
+
+.logo {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../img/sm9-logo.png');
+	text-indent: -999rem;
+	width:100%;
+	height:0;
+	padding-bottom:100%;
+}
+
+#shop {
+	
+	padding-bottom:0;
+
+	.product {
+		
+		padding: 4rem;
+		border-bottom: 1px solid rgba(200,200,200,0.25);
+
+		h3 {
+			font-size: 6vw;
+			margin-bottom: 0;
+		}
+
+		.price {
+			font-size: 6vw;
+			margin-bottom: 3vw;
+			display: block;
+		}
+
+		&:nth-child(even) {
+			background: rgba(50,50,50,0.25);
+		}
+
+		img {
+			margin: auto;
+			display: block;
+		}
+
+		@media(#{$break_md}) {
+			border-right: 1px solid rgba(200,200,200,0.25);
+			border-bottom:0;
+
+			&:nth-child(even) {
+				background: rgba(0,0,0,0);
+			}
+
+			&:last-child {
+				border:0;
+			}
+
+			h3 {
+				font-size: 3vw;
+			}
+
+			.price {
+				font-size: 3vw;
+			}
+		}
+
+		@media(#{$break_md}) {
+			h3 {
+				font-size: 2vw;
+			}
+
+			.price {
+				font-size: 2vw;
+			}
+		}
+
+	}
+}
+
+.site-info {
+	text-align: center;
+}

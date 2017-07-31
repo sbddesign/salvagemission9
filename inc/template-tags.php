@@ -47,9 +47,9 @@ function understrap_entry_footer() {
 			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'understrap' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );
+		$tags_list = get_the_tag_list( '', '<span class="comma">,</span> ', '' );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'understrap' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links"><span class="tags-links-title">Tagged</span>' . esc_html__( '%1$s', 'understrap' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {

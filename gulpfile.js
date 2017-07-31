@@ -18,7 +18,7 @@ var browserSyncWatchFiles = [
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
-    proxy: "localhost/wordpress/",
+    proxy: "http://salvagemission9.com",
     notify: false
 };
 
@@ -203,7 +203,9 @@ gulp.task('scripts', function() {
 
         // End - All BS4 stuff
 
-        basePaths.dev + 'js/skip-link-focus-fix.js'
+        basePaths.dev + 'js/skip-link-focus-fix.js',
+
+        basePaths.dev + 'js/sm9.js'
     ];
   gulp.src(scripts)
     .pipe(concat('theme.min.js'))
