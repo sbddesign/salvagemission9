@@ -38,12 +38,12 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 					</div>
 
 					<div class="section" id="about">
-						<p>After the collapse of society, a deranged salvager and his apprentice become obsessed with battling a psych-warfare drone leftover from the old world.</p>
+						<p>After the collapse of society, the apprentice of a deranged salvager fights for revenge against an invisible enemy.</p>
 					</div>
 
 					<div class="section" id="trailer">
 						<div class="video-container">
-							<iframe src="https://player.vimeo.com/video/226845128" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							<iframe src="https://player.vimeo.com/video/227630442" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 						</div>
 					</div>
 
